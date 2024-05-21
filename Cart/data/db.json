@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": "ad27",
+      "email": "samuel@gmail.com",
+      "username": "waweru",
+      "password": "1234"
+    }
+  ],
+  "products": [
+    {
+      "id": "001",
+      "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D",
+      "prodName": "Timone Castor Oil",
+      "description": "Good oil For face and to remove blemish 250ml",
+      "price": 2000,
+      "inStock": 20
+    }
+  ]
+}

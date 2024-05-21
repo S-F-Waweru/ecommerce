@@ -1,76 +1,76 @@
-
-
+let baseURLProducts = "http://localhost:3000/products/" 
 // let products = []
-let products = [
-        {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-            prodName    : 'Overes Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 0
-        },
-        {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-            prodName    : 'Mushu Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 5
-        },
-        {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-            prodName    : 'Fushi Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }, {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-            prodName    : 'Shifu Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }, {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2lsJTIwcHJvZHVjdGNzfGVufDB8fDB8fHww',
-            prodName    : 'Pumba Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }, {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-            prodName    : 'Sakura Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }
-        , {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-            prodName    : 'Mob Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }
-        , {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-            prodName    : 'Sokka Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }, {
-            id          :Math.floor(Math.random()*10000),
-            image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-            prodName    : 'Timone Castor Oil',
-            description : 'Good oil For face and to remove blemish 250ml',
-            price : 2000,
-            inStock: 20
-        }
-]
+// let products = [
+        // {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
+        //     prodName    : 'Overes Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 0
+        // },
+        // {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
+        //     prodName    : 'Mushu Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 5
+        // },
+        // {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
+        //     prodName    : 'Fushi Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }, {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
+        //     prodName    : 'Shifu Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }, {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2lsJTIwcHJvZHVjdGNzfGVufDB8fDB8fHww',
+        //     prodName    : 'Pumba Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }, {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
+        //     prodName    : 'Sakura Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }
+        // , {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
+        //     prodName    : 'Mob Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }
+        // , {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
+        //     prodName    : 'Sokka Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }, {
+        //     id          :Math.floor(Math.random()*10000),
+        //     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
+        //     prodName    : 'Timone Castor Oil',
+        //     description : 'Good oil For face and to remove blemish 250ml',
+        //     price : 2000,
+        //     inStock: 20
+        // }
+// ]
+let products = []
 let cartList = [
    
 ]
@@ -85,14 +85,20 @@ const cartItemBtn = document.querySelector(".cart-body")
 let plus = '+'
 let minus = '-'
 
+
 showProducts()
 subtotal()
 // display the products
-function showProducts(){
+async function showProducts(){
+    // get the products
+    products = await getAllProducts()
+    console.log(products.length)
+
     console.log("hihi")
     let html = ""
     if (products.length !== 0){
        products.forEach(p=>{
+        // console.log("id is" + p.id)
             html += 
             `
             <div class="card">
@@ -102,7 +108,7 @@ function showProducts(){
                 <p>${p.description}</p>
                 <div>
                     <p>${p.price} KSH</p>
-                    <button onClick="addToCart(${p.id})" >Add to cart</button>
+                    <button onClick="addToCart('${p.id}')" >Add to cart</button>
                 </div>
             </div>
        </div>
@@ -142,10 +148,13 @@ cartNavBtn.addEventListener('click', function(e){
     }
 })
 
-// adds and itmes in the cart
-function addToCart(id){
-    // console.log("HI HI")
-   let product =  products.find(p=> p.id === id)
+// adds and itmes in the cartty
+async function addToCart(id){
+    // console.log(products)
+    let products= await getAllProducts()
+   
+   let product = products.find(p=> p.id === id)
+   console.log('products' ,products,id);
    let cartid = Math.floor(Math.random()*1000)
    let quant = 1
    quant+=1
@@ -164,6 +173,8 @@ function addToCart(id){
     // console.log("Found")
    }else{
     // console.log("No Found")
+
+    // console.log(product)
 
     if (product.inStock > 0){
        
@@ -317,3 +328,42 @@ function totalItems(){
 
     console.log(total)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// fetch products
+async function getAllProducts(){
+    let response = await fetch(baseURLProducts)
+    let products =await response.json()
+    console.log(products)
+    return products
+}
+
+
+getAllProducts()
+
+console.log(products);
