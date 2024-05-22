@@ -265,3 +265,46 @@ button:hover {
   font-size: 20px;
   color: orange;
 }
+form{
+  display: flex;
+  flex-direction:  column;
+}
+.addProduct{
+  width: 60%;
+  margin:auto;
+}
+
+.addProduct input{
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+}
+
+
+.addProduct button {
+  padding: 12px 20px;
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.addProduct label {
+  font-weight: bold;
+  text-align: start;
+   width: 75%;
+  margin: auto;
+  padding: 10px;
+}
+
+.btn-delete{
+  color: white;
+  background-color: rgb(6, 90, 6);
+
+.btn-update{
+  color: white;
+  background-color: rgb(38, 179, 38);
+}
+
+.btn-delete :hover{
+  background-color:rgb(184, 46, 46);
+}
