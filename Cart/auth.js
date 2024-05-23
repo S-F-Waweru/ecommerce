@@ -4,6 +4,7 @@ const inputPassword = document.getElementById("password");
 const inputConfPasword = document.getElementById("confpassword");
 const inputRegisterBtn = document.querySelector("#register");
 
+
 const baseURL = "http://localhost:3000/users/";
 
 inputRegisterBtn.addEventListener("click", getUser);
@@ -86,3 +87,4 @@ function registerUser(user) {
 
   console.log(response.json());
 }
+

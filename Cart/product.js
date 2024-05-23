@@ -41,7 +41,7 @@ function createProduct(e) {
         image: productImage.trim(),
         description: productDescription.trim(),
         price: productPrice.trim(),
-        instock: productStock,
+        inStock: productStock,
         };
         // console.log(product);
         addProductsDb(product);
@@ -107,13 +107,15 @@ async function displayProducts() {
     console.log(product)
     addProductBtn.addEventListener('click',()=>{
         if (addProductBtn.textContent == "Update Product"){
+
+            console.log(inputName.value, inpuStock.value, inputDescription.value, inputImage.value)
             product = {
                 id : product.id,
                 prodName: inputName.value,
                 image :  inputImage.value,
                 description:inputDescription.value,
                 price:inputPrice.value,
-                instock:inpuStock.value,
+                inStock:inpuStock.value,
             }
             // console.log("updated products" +  product)
                  updateProductDb(product)
@@ -151,10 +153,10 @@ async function getProductDb() {
 }
 
 // update a products
-async function updateProductDb({ id, ...updatedProduct}) {
-  let response = await fetch(baseURLProducts, {
+async function updateProductDb({ id, ...product}) {
+  let response = await fetch(baseURLProducts+id, {
     method: "PUT",
-    body: response.stringify(updatedProduct),
+    body: JSON.stringify(product),
   });
 }
 
