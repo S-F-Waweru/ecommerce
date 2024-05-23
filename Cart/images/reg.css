@@ -1,0 +1,18 @@
+*{
+    padding: 15px;
+    background-color: azure;
+    gap: 5px;
+    align-items: center;
+
+}
+.container{
+ border: 10px solid;
+ /* border-color: red; */
+ align-items: center;
+ justify-content: center;
+ padding: 15px;
+}
+.register{
+    align-items: center;
+    justify-content: center;
+}
