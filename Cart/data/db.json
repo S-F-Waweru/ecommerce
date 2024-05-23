@@ -5,6 +5,24 @@
       "email": "samuel@gmail.com",
       "username": "waweru",
       "password": "1234"
+    },
+    {
+      "id": "8208",
+      "email": "samuel@gmail.com",
+      "username": "samuel",
+      "password": "qwerty"
+    },
+    {
+      "id": "0c97",
+      "email": "samuel@gmail.com",
+      "username": "francis",
+      "password": "1234"
+    },
+    {
+      "id": "5bbd",
+      "email": "samuel@gmail.com",
+      "username": "samuels",
+      "password": "1234"
     }
   ],
   "products": [

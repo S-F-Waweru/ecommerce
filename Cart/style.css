@@ -335,3 +335,21 @@ form{
   align-items: center;
   /* background-color: blue; */
 }
+
+
+.register{
+  padding: 30px;
+  width: 50%;
+  height: 300px;;
+  align-content: center;
+  justify-content: center;
+  /* background-color: blue; */
+  margin: auto;gap: 10px;
+}
+.register input{
+  padding: 10px;
+
+}
+.register button{
+  padding: 20px;
+}

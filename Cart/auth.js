@@ -47,6 +47,7 @@ async function getUser(e) {
       };
 
       registerUser(user);
+      window.location.href = "login.html"
     }
   }
 }
