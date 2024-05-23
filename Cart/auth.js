@@ -61,11 +61,13 @@ function validate(email, username, password, confPasword) {
     password.trim() == "" ||
     confPasword.trim() == ""
   ) {
+
+    alert("The field must not be empty");
+
     
-    console.log("The field must not be empty");
     return false;
   } else if (password !== confPasword) {
-    console.log("Password must match");
+    alert("Password must match");
     return false;
   }
 
