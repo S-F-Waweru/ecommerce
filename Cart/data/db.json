@@ -5,36 +5,43 @@
       "email": "samuel@gmail.com",
       "username": "waweru",
       "password": "1234"
+    },
+    {
+      "id": "8208",
+      "email": "samuel@gmail.com",
+      "username": "samuel",
+      "password": "qwerty"
+    },
+    {
+      "id": "0c97",
+      "email": "samuel@gmail.com",
+      "username": "francis",
+      "password": "1234"
+    },
+    {
+      "id": "5bbd",
+      "email": "samuel@gmail.com",
+      "username": "samuels",
+      "password": "1234"
     }
   ],
   "products": [
     {
-      "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D",
-      "prodName": "Timone Castor Oil",
-      "description": "Good oil For face and to remove blemish 250ml",
-      "price": 2000,
-      "inStock": 19,
-      "id": "001"
+      "prodName": "Overes Castor Oil",
+      "image": "https://images.unsplash.com/photo-1671493229048-4dddd00ca84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8",
+      "description": "Good for smooth skin and soft",
+      "price": "6000",
+      "inStock": "50",
+      "id": "f883"
     },
     {
-      "image": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D",
-      "prodName": "Sakura Castor Oil",
-      "description": "Good oil For face and to remove blemish 250ml",
-      "price": 2000,
-      "inStock": 12,
-      "id": "002"
+      "id": "8e84",
+      "prodName": "Sams Castor Oil",
+      "image": "https://images.unsplash.com/photo-1671493229048-4dddd00ca84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8",
+      "description": "Good for smooth skin and soft",
+      "price": "5000",
+      "inStock": 100
     }
   ],
-  "cart": [
-    {
-      "productId": "002",
-      "quantity": 9,
-      "id": "40b1"
-    },
-    {
-      "productId": "001",
-      "quantity": 2,
-      "id": "edf3"
-    }
-  ]
+  "cart": []
 }
