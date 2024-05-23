@@ -353,3 +353,27 @@ form{
 .register button{
   padding: 20px;
 }
+.success{
+  display: none;
+  background-color: rgb(192, 233, 192);
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: green;
+}
+.error{
+  display: none;
+  background-color: rgb(230, 175, 175);
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: red;
+}
+.delete{
+  display: none;
+  background-color: rgb(230, 175, 175);
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 10px 30px;
+  color: red;
+}
