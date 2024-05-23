@@ -8,11 +8,17 @@ const inputPrice = document.getElementById("pPrice");
 const inpuStock = document.getElementById("pStock");
 
 addProductBtn.addEventListener("click", createProduct);
+const errorDiv = document.querySelector('.error')
+const successDiv = document.querySelector('.success')
+const deleteDiv = document.querySelector('.delete')
+
 
 
 const contentDiv = document.querySelector(".content");
 
 displayProducts()
+
+
 // Create Products
 function createProduct(e) {
   e.preventDefault();
@@ -45,6 +51,11 @@ function createProduct(e) {
         };
         // console.log(product);
         addProductsDb(product);
+
+        // success message
+        successDiv.style = "display: block"
+        successDiv.innerHTML = `   <p>Item added successFully !</p>   `
+        timer(4,successDiv)    
     }
   }
 
@@ -122,6 +133,11 @@ async function displayProducts() {
                 console.log( "products  updated " +  product)
                 addProductBtn.textContent = "Add Product"
                 addProductBtn.style = "background-color: orange"
+
+                       // success message
+        successDiv.style = "display: block"
+        successDiv.innerHTML = `   <p>Item updated successFully !</p>   `
+        timer(4,successDiv) 
     
         }
 
@@ -164,6 +180,13 @@ function deleteProductDb({ id, ...product }) {
   let response = fetch(baseURLProducts + id, {
     method: "DELETE",
   });
+
+  deleteDiv.style = "display: block"
+  deleteDiv.innerHTML = `<p>
+  <ion-icon name="alert-circle-outline"></ion-icon>
+    Product deleted!!
+  </p>`
+  timer(3,errorDiv) 
 }
 
 
@@ -171,16 +194,21 @@ function deleteProductDb({ id, ...product }) {
 ///////////////////// validation function
 function validate(name, image, description, price, stock) {
     if (
-      name.trim() == "" &&
-      image.trim() == "" &&
-      description.trim() == "" &&
-      price.trim() == "" &&
+      name.trim() == "" ||
+      image.trim() == "" ||
+      description.trim() == "" ||
+      price.trim() == "" ||
       stock.trim() == ""
     ) {
-      console.log("fields cannot be empty");
-      return false;
+      errorDiv.style = "display: block"
+      errorDiv.innerHTML = `<p>
+      <ion-icon name="alert-circle-outline"></ion-icon>
+        All fields must be  Filled !!
+      </p>`
+      timer(3,errorDiv)    
+       return false;
     } else {
-    //   console.log("Not empty");
+      
       return true;
     }
   }
@@ -196,4 +224,11 @@ function validate(name, image, description, price, stock) {
         addProductBtn.textContent = "Update Product"
         // console.log(addProductBtn.textContent);
         addProductBtn.style = "background-color: green"
+  }
+
+  async function timer(seconds, div){
+    seconds = seconds * 1000
+    await setTimeout(()=>{
+      div.style = "display: none"
+    },seconds)
   }
