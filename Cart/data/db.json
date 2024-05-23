@@ -1,28 +1,18 @@
 {
   "users": [
     {
-      "id": "ad27",
-      "email": "samuel@gmail.com",
-      "username": "waweru",
-      "password": "1234"
-    },
-    {
-      "id": "8208",
+      "id": "a662",
       "email": "samuel@gmail.com",
       "username": "samuel",
-      "password": "qwerty"
+      "password": "1234",
+      "cart": []
     },
     {
-      "id": "0c97",
-      "email": "samuel@gmail.com",
-      "username": "francis",
-      "password": "1234"
-    },
-    {
-      "id": "5bbd",
+      "id": "788e",
       "email": "samuel@gmail.com",
       "username": "samuels",
-      "password": "1234"
+      "password": "qwerty",
+      "cart": []
     }
   ],
   "products": [
@@ -31,15 +21,40 @@
       "image": "https://images.unsplash.com/photo-1671493229048-4dddd00ca84a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8",
       "description": "Good stuff",
       "price": "6000",
-      "inStock": "3",
+      "inStock": 4,
       "id": "2c91"
+    },
+    {
+      "prodName": "Overes Castor Oil",
+      "image": "https://images.unsplash.com/photo-1608571702600-5a5419d31475?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhc3RvciUyMG9pbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Good stuff",
+      "price": "2000",
+      "inStock": 8,
+      "id": "6208"
+    },
+    {
+      "prodName": "Overes Castor Oil  Banana",
+      "image": "https://images.unsplash.com/photo-1608571702600-5a5419d31475?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGNhc3RvciUyMG9pbHxlbnwwfHwwfHx8MA%3D%3D",
+      "description": "Good stuff",
+      "price": "7000",
+      "inStock": 9,
+      "id": "1f66"
+    },
+    {
+      "id": "ec58",
+      "prodName": "Sams Castor Oil",
+      "image": "https://images.unsplash.com/photo-1608571423539-e951b9b3871e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D",
+      "description": "Good stuff",
+      "price": "5000",
+      "inStock": 50
     }
   ],
   "cart": [
     {
-      "productId": null,
-      "quantity": 2,
-      "id": "a121"
+      "productId": "6208",
+      "quantity": 3,
+      "id": "3868"
     }
-  ]
+  ],
+  "orders": []
 }
