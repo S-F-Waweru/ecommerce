@@ -1,76 +1,23 @@
 let baseURLProducts = "http://localhost:3000/products/";
 let baseURLCart = "http://localhost:3000/cart/";
-// let products = []
-// let products = [
-// {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-//     prodName    : 'Overes Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 0
-// },
-// {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-//     prodName    : 'Mushu Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 5
-// },
-// {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-//     prodName    : 'Fushi Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }, {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1608571899778-51e02b3334f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw%3D',
-//     prodName    : 'Shifu Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }, {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2lsJTIwcHJvZHVjdGNzfGVufDB8fDB8fHww',
-//     prodName    : 'Pumba Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }, {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-//     prodName    : 'Sakura Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }
-// , {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-//     prodName    : 'Mob Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }
-// , {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-//     prodName    : 'Sokka Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }, {
-//     id          :Math.floor(Math.random()*10000),
-//     image       :'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG9pbCUyMHByb2R1Y3Rjc3xlbnwwfHwwfHx8MA%3D%3D',
-//     prodName    : 'Timone Castor Oil',
-//     description : 'Good oil For face and to remove blemish 250ml',
-//     price : 2000,
-//     inStock: 20
-// }
-// ]
+let baseURLUser = "http://localhost:3000/users/";
+
+
+async function getUserFromLogin(){
+  let userID = sessionStorage.getItem("userID")
+  // console.log( "this is "+ userID)
+  let users  = await getDbUsers()
+ let user =  users.find(u => u.id == userID)
+   return user
+}
+let user = getUserFromLogin()
+if (user){
+showProducts()
+}else{
+window.location.href = "login.html"
+}
+
+
 let products = [];
 let cartList = [];
 
@@ -80,12 +27,12 @@ const cartDiv = document.querySelector(".cart");
 const contentDiv = document.querySelector(".content");
 const cartBodyDiv = document.querySelector(".cart-body");
 const cartItemBtn = document.querySelector(".cart-body");
-const addProductBtn = document.getElementById("addProductBtn")
+const addProductBtn = document.getElementById("addProductBtn");
 let plus = "+";
 let minus = "-";
 
-showProducts();
-subtotal();
+// showProducts();
+// subtotal();
 // display the products
 async function showProducts() {
   // get the products
@@ -146,7 +93,8 @@ async function addToCart(id) {
   let products = await getAllProducts();
 
   let product = products.find((p) => p.id === id);
-  console.log("products", products, id);
+  // console.log("products", products, id);
+
   let cartid = Math.floor(Math.random() * 1000);
   let quant = 1;
   quant += 1;
@@ -163,26 +111,16 @@ async function addToCart(id) {
       updateProductDb(product);
       showCartItems();
       subtotal();
-      // console.log(product.inStock)
     } else {
       alert("No Available Item in stock !");
     }
-
-    // console.log("Found")
   } else {
-    // console.log("No Found")
-
-    // console.log(product)
-
     if (product.inStock > 0) {
       cartItem = {
-        // id :Math.floor(Math.random()*10000),
         productId: id,
         quantity: 1,
       };
 
-      // addITemToDB
-      // cartList.push(cartItem)
       if (addToCartDb(cartItem)) {
         console.log("added to Database");
 
@@ -194,8 +132,6 @@ async function addToCart(id) {
     } else {
       alert("No Available Item in stock !");
     }
-
-    // console.log(cartList)
   }
 }
 
@@ -263,6 +199,7 @@ function addCartItem(itemId) {
   }
 }
 
+// the minus buttons in cart Item
 function minusCartItem(itemId) {
   // console.log(itemId)
   let item = cartList.find((i) => i.id === itemId);
@@ -297,10 +234,10 @@ function removeFromCart(cartItem) {
   // alert("Item  Removed from cart from method")
 }
 
-// remained herer and discount
-
+// calculate the subtotal
 function subtotal() {
   const totalDiv = document.querySelector(".subtotal");
+  // console.log(  "this is a cart list "+cartList  )
   totalItems();
   html = "";
   totalCost = 0;
@@ -319,11 +256,12 @@ function subtotal() {
 
   console.log(totalCost);
 }
+// total items
 async function totalItems() {
-    html =""
+  html = "";
   cartList = await getCartList();
   const cartHeader = document.querySelector(".cart-header");
-  console.log("cart list sub total" + cartList);
+  // console.log("cart list sub total" + cartList);
   total = 0;
   cartList.forEach((item) => {
     total += item.quantity;
@@ -385,21 +323,22 @@ function updateProductDb({ id, ...product }) {
     body: JSON.stringify(product),
   });
 }
-function addProduct(product){
-    let response  = fetch(baseURLProducts,{
-        method : "POST",
-        body : JSON.stringify(item)
-    })
+function addProduct(product) {
+  let response = fetch(baseURLProducts, {
+    method: "POST",
+    body: JSON.stringify(item),
+  });
 }
 
 function deleteProduct(product) {
-    let id = product.id;
-    let response = fetch(baseURLProducts + id, {
-      method: "DELETE",
-    });
-  }
+  let id = product.id;
+  let response = fetch(baseURLProducts + id, {
+    method: "DELETE",
+  });
+}
 
-addProductBtn.addEventListener('click', (e)=>{
-    e.preventDefault()
-    console.log("watched")
-})
+async function getDbUsers(){
+  let response = await fetch(baseURLUser)
+  let users = await response.json()
+  return users
+}

@@ -115,11 +115,11 @@ async function displayProducts() {
     let products = await getProductDb()
     let product = products.find(p => p.id === id)
     prepopulate(product)
-    console.log(product)
+    // console.log(product)
     addProductBtn.addEventListener('click',()=>{
         if (addProductBtn.textContent == "Update Product"){
 
-            console.log(inputName.value, inpuStock.value, inputDescription.value, inputImage.value)
+            // console.log(inputName.value, inpuStock.value, inputDescription.value, inputImage.value)
             product = {
                 id : product.id,
                 prodName: inputName.value,

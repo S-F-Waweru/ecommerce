@@ -18,21 +18,27 @@ function authenticateLogin(e) {
   if (validation) {
     // show the user details
     console.log(usernameT, passwordT);
-    authUser(usernameT, password)
+    authUser(usernameT, passwordT)
   }
 }
 
 async function authUser(usernameT, passwordT) {
   let users = await getUsersdb();
+  console.log(users)
+  // console.log(usernameT, passwordT)
   // validate the user then redirect to product page
   let user = users.find(user => (user.username === usernameT) &&
   (user.password === passwordT))
 
+  console.log(user)
+
   if(user) {
+    console.log( user )
+    sessionStorage.setItem("userID" , user.id)
     window.location.href = "index.html"
   }else{
-    alert("Username or passowrd does not match")
-    window.location.href = "register.html"
+    alert("Username or passowrd does not match please please try again")
+    // window.location.href = "register.html"
   }
 
 

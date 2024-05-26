@@ -28,7 +28,7 @@ async function getUser(e) {
   let validation = validate(email, username, password, confPasword);
 
   if (!validation) {
-    console.log("please recheck on your credenctials");
+    alert("please recheck on your credenctials");
   } else {
     console.log("good creds credenctials");
 
@@ -38,12 +38,13 @@ async function getUser(e) {
     let existingUser = users.find((user) => user.username === username);
     console.log(existingUser);
     if (existingUser) {
-      console.log("Username name is taken please use another username");
+      alert("Username name is taken please use another username");
     } else {
       let user = {
         email: email,
         username: username,
         password: password,
+        cart : []
       };
 
       registerUser(user);
@@ -89,6 +90,6 @@ function registerUser(user) {
     body: JSON.stringify(user),
   });
 
-  console.log(response.json());
+  // alert("user added succefully")
 }
 
